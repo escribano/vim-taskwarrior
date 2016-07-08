@@ -95,13 +95,15 @@ if g:task_readonly
         nunmap <silent> <buffer> p
         nunmap <silent> <buffer> +
         nunmap <silent> <buffer> -
-        nunmap <silent> <buffer> <Space>
+        "nunmap <silent> <buffer> <Space>
+        nunmap <silent> <buffer> g
         nunmap <silent> <buffer> <C-A>
         nunmap <silent> <buffer> <C-X>
         vunmap <silent> <buffer> d
         vunmap <silent> <buffer> D
         vunmap <silent> <buffer> <Del>
-        vunmap <silent> <buffer> <Space>
+        "vunmap <silent> <buffer> <Space>
+        vunmap <silent> <buffer> g
     endif
 else
     nmap <silent> <buffer> A        <Plug>(taskwarrior_annotate)
@@ -123,13 +125,15 @@ else
     nmap <silent> <buffer> p        <Plug>(taskwarrior_paste)
     nmap <silent> <buffer> +        <Plug>(taskwarrior_start_task)
     nmap <silent> <buffer> -        <Plug>(taskwarrior_stop_task)
-    nmap <silent> <buffer> <Space>  <Plug>(taskwarrior_select)
+    "nmap <silent> <buffer> <Space>  <Plug>(taskwarrior_select)
+    nmap <silent> <buffer> g        <Plug>(taskwarrior_select)
     nmap <silent> <buffer> <C-A>    <Plug>(taskwarrior_increase)
     nmap <silent> <buffer> <C-X>    <Plug>(taskwarrior_decrease)
     vmap <silent> <buffer> d        <Plug>(taskwarrior_visual_done)
     vmap <silent> <buffer> D        <Plug>(taskwarrior_visual_delete)
     vmap <silent> <buffer> <Del>    <Plug>(taskwarrior_visual_delete)
-    vmap <silent> <buffer> <Space>  <Plug>(taskwarrior_visual_select)
+    "vmap <silent> <buffer> <Space>  <Plug>(taskwarrior_visual_select)
+    vmap <silent> <buffer> g        <Plug>(taskwarrior_visual_select)
 
     command! -buffer TWAdd               :call taskwarrior#action#new()
     command! -buffer TWAnnotate          :call taskwarrior#action#annotate('add')
